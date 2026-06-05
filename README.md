@@ -11,20 +11,6 @@ Proyek ini adalah sistem pemantauan Alat Pelindung Diri (APD) berbasis Computer 
 * **Interactive Table Dashboard (Auto-Save):** Panel rekapitulasi data menggunakan `st.data_editor` yang mendukung pencentangan status "Ditangani?" dan pengisian catatan lapangan dengan fitur penyimpanan otomatis (*Auto-Save*) ke database.
 * **Cetak Laporan Instan (PDF/CSV):** Fungsionalitas ekspor rekapitulasi riwayat data pelanggaran K3 secara fisik dalam format dokumen `.csv` dan `.pdf` (`fpdf2`).
 
-## Struktur Direktori 
-├── runs/
-│   └── Vision Models/       # Folder penyimpanan file model arsitektur best.onnx
-├── storage/
-│   ├── clips/               # Direktori penyimpanan lokal foto snapshot bukti pelanggaran (.jpg)
-│   └── live/                # Direktori buffer gambar live feed kamera untuk dashboard web
-├── tests/
-│   ├── config.py            # Konfigurasi variabel alamat basis URL API
-│   └── main.py              # Skrip backend routing dan inisialisasi database FastAPI
-├── dashboard.py             # Kode aplikasi utama frontend monitoring dashboard Streamlit
-├── detect-save.py           # Skrip inti pemrosesan citra AI, logika APD, dan Telegram Alert
-└── README.md                # Dokumentasi petunjuk proyek utama
-
-
 Langkah-Langkah:
 1. Instalasi Dependensi:
    pip install fastapi uvicorn streamlit sqlalchemy opencv-python numpy onnxruntime requests python-jose python-dotenv bcrypt passlib
