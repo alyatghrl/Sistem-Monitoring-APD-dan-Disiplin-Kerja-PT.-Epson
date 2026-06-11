@@ -4,7 +4,7 @@ import onnxruntime as ort
 import os
 import time
 import requests
-import threading  # SAKTI: Mengirim foto di background thread biar kamera tidak patah-patah
+import threading  
 from datetime import datetime
 from tests.config import API_BASE_URL
 
@@ -59,7 +59,6 @@ def send_telegram_photo_worker(violation_name, camera_id, confidence, image_path
         f"⚠️ Notifikasi real-time + Bukti Foto terkirim sukses!"
     )
     try:
-        # Membuka dan mengirimkan file biner foto snapshot secara independen
         with open(image_path, 'rb') as photo_file:
             payload = {"chat_id": TELEGRAM_CHAT_ID, "caption": message}
             files   = {"photo": photo_file}
