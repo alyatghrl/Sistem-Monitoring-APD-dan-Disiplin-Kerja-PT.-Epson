@@ -30,7 +30,6 @@ class_names = [
     "none", "person", "no_helmet", "no_goggle", "no_gloves", "no_boots"
 ]
 
-# Batas akurasi ideal untuk demo dengan gambar jernih (menghindari false positive)
 CONF_THRESHOLD = 0.45  
 IOS_THRESHOLD  = 0.30
 SAVE_COOLDOWN  = 5.0   
